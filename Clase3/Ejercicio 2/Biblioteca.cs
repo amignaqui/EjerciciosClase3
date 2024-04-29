@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
+﻿using Clase3.Ejercicio_2.Ejercicio_2;
 
 namespace Clase3.Ejercicio_2
 {
-    public class Biblioteca
+    public class Biblioteca : IBiblioteca
     {
         public List<string> Libros { get; set; }
 
@@ -27,7 +22,12 @@ namespace Clase3.Ejercicio_2
                 "La sombra del viento"
             };
         }
-        
-
+        public void ObtenerLibros(Biblioteca miBiblioteca)
+        {
+            foreach (string bookTitle in Libros)
+            {
+                Console.WriteLine(bookTitle);
+            }
+        }
     }
 }
